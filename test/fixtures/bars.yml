@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  phone_number: MyString
+  avg_rating: 1
+  rating_id: 1
+  music: false
+  sports: false
+  dancing: false
+  beer: false
+  cocktails: false
+  wine: false
+  rooftop: false
+  cheap_food: false
+  food: 1
+  dress_code: false
+  line: false
+  popular_nights: 1
+  karaoke: false
+
+two:
+  name: MyString
+  address: MyString
+  phone_number: MyString
+  avg_rating: 1
+  rating_id: 1
+  music: false
+  sports: false
+  dancing: false
+  beer: false
+  cocktails: false
+  wine: false
+  rooftop: false
+  cheap_food: false
+  food: 1
+  dress_code: false
+  line: false
+  popular_nights: 1
+  karaoke: false
