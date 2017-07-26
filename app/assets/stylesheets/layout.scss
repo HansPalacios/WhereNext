@@ -9,7 +9,7 @@
 header {
 	height: 150px;
 	width: 100%;
-	background: linear-gradient(90deg, #000,#452ADE);
+	background: linear-gradient(90deg, #000, #000, #452ADE);
 	padding: 40px;
 	h1 {
 		margin: 10px;
@@ -31,7 +31,7 @@ header {
 #sibox, #subox{
 	width: 600px;
 	height: 350px;
-	background-color: rgba(100,100,100,0.9);
+	background-color: rgba(100,100,100,0.5);
 	border: 2px solid grey;
 	padding: 30px 50px;
 	border-radius: 25px;
@@ -42,10 +42,10 @@ header {
 	text-align: center;
 	z-index: 1;
 	input, label {
-		display: block;
+		display: inline-block;
 		margin: 5px auto;
 	}
-	#close{
+	#close, #close2{
 		right: 15px;
 		top: 10px;
 		font-family: 'Montserrat';

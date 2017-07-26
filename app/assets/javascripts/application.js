@@ -18,11 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	var sibox = document.getElementById( 'sibox' )
 	var signup = document.getElementById( 'signup' )
 	var subox = document.getElementById( 'subox' )
+	var close = document.getElementById( 'close' )
+	var close2 = document.getElementById( 'close2' )
 
 	signin.addEventListener('click', function(){
 	    sibox.style.display = 'block';
 	});
 	signup.addEventListener('click', function(){
 	    subox.style.display = 'block';
+	});
+	close.addEventListener('click', function() {
+			sibox.style.display = 'none';
+	});
+	close2.addEventListener('click', function() {
+			subox.style.display = 'none';
 	});
 });

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Bar.create([
-	{id: 1, name: 'Westlight', address: '111 N 12th St', phone: '718-307-7100', description: 'fancy rooftop bar on top of the even fancier new William Vale hotel in Brooklyn feels like something you would find in Manhattan', rating: 8, music: false, sports: false, dancing: false, beer: true, cocktails: true, wine: true, rooftop: true, cheap_food: false, dress_code: true, line: true, popular_nights: [4, 5, 6], karaoke: false
+	{id: 1, name: 'Westlight', image: File.new("#{Rails.root}/images/Tōyō.jpg"), address: '111 N 12th St', phone: '718-307-7100', description: 'fancy rooftop bar on top of the even fancier new William Vale hotel in Brooklyn feels like something you would find in Manhattan', rating: 8, music: false, sports: false, dancing: false, beer: true, cocktails: true, wine: true, rooftop: true, cheap_food: false, dress_code: true, line: true, popular_nights: [4, 5, 6], karaoke: false
 		},
 	{id: 2, name: 'Fresh Kills Bar', address: '161 Grand St', phone: '718-599-7888', description: 'unpretentious, but the cocktails are top-of-the-line, and every bartender knows what they’re doing.', rating: 7, music: false, sports: false, dancing: false, beer: true, cocktails: true, wine: true, rooftop: false, cheap_food: false, dress_code: false, line: false, popular_nights: [3, 5, 6], karaoke: false
 		},
