@@ -20,7 +20,7 @@ class CreateBars < ActiveRecord::Migration[5.1]
       t.integer :popular_nights
       t.boolean :karaoke
 
-      t.timestamps
+      # t.timestamps
     end
   end
 end
