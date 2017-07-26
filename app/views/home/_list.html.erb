@@ -1,11 +1,11 @@
 <div id="list">
-	<% @arts.each do |art| %>
+	<% @bars.each do |bar| %>
 		      <style media="screen">
-          /*applying css within erb statement, '-' = # of art, defined in class*/
-		    		.art-<%= art.id %> { background-image: url(<%= art.image %>); }
+          /*applying css within erb statement, '-' = # of bar, defined in class*/
+		    		.bar-<%= bar.id %> { background-image: url(<%= bar.image %>); }
 				  </style>
 				  <%= link_to art do
-							tag.article "", :class => " art art-#{art.id}"
+							tag.article "", :class => " bar bar-#{bar.id}"
 				  	end %>
 		    <% end %>
 </div>
