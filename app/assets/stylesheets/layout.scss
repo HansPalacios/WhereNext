@@ -1,0 +1,18 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+	margin:0;
+	padding: 0;
+}
+
+header {
+	height: 150px;
+	width: 100%;
+	background: linear-gradient(90deg, #000,#452ADE);
+	padding: 20px;
+	h1 {
+		margin: 30px;
+		color: white;
+	}
+}

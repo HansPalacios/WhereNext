@@ -3,7 +3,7 @@
   <head>
     <title>Wherenext</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -11,7 +11,39 @@
   <body>
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+ 		
+ 		<header> 
+ 			<div class="container">
+ 				<div class="row">
+	 				<div class="col-md-8">
+	 					<h1>Where Next</h1>
+	 				</div>
+	 				<div class="col-md-1">
+	 					<%= button_to "Sign Up", :id => "signup" %>
+          </div>
+          <div class="col-md-1">
+	 					<%= button_to "Sign In", :id => "signin" %>
+          </div>
+          <div class="col-md-2">
+	 				</div>
+ 				</div>		
+ 			</div>
+ 		</header>
 
     <%= yield %>
+
+    <footer>
+    	<div class="container">
+				<div class="row">
+				<div class="col-md-4">
+ 				</div>
+ 				<div class="col-md-4">
+ 				</div>
+ 				<div class="col-md-4">
+ 				</div>
+				</div>
+    	</div>
+    </footer>
+
   </body>
 </html>
