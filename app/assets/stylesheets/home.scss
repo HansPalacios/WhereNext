@@ -9,6 +9,10 @@
 		border-right: 1px solid black;
 		border-bottom: 1px solid black;
 		height: 600px;
+		background: linear-gradient(90deg, #000, #777);
+		h2 {
+			color: white;
+		}
 		.rotate {
 			writing-mode:tb-rl;
     	transform: rotate(-180deg);
@@ -17,7 +21,7 @@
     	width:200px;
     	height:20px;
     	margin-top: 300px;
-    	margin-left: 30px;
+    	margin-left: 30px
 	}
 	}
 	.border2 {
@@ -26,6 +30,10 @@
 		border-right: 1px solid black;
 		border-bottom: 1px solid black;
 		height: 300px;
+		background: linear-gradient(90deg, #000, #444);
+		h2 {
+			color: white;
+		}
 		.rotate {
 			writing-mode:tb-rl;
    	 	transform: rotate(-180deg);
@@ -34,7 +42,7 @@
    	 	width:200px;
    	 	height:20px;
    	 	margin-top: 150px;
-   	 	margin-left: 30px;
+   	 	margin-left: 30px
 	}
 	}
 }
