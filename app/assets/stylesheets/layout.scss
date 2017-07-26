@@ -16,7 +16,11 @@ header {
 	padding: 40px;
 	h1 {
 		margin: 10px;
+		font-size: 40px;
 		color: white;
+		font-family: "Permanent Marker";
+	}
+	h2 {
 		font-family: "Permanent Marker";
 	}
 	a {
@@ -31,30 +35,78 @@ header {
 }
 #sibox, #subox{
 	width: 600px;
-	height: 350px;
+	height: 250px;
 	background-color: rgba(100,100,100,0.5);
 	border: 2px solid grey;
 	padding: 30px 50px;
-	border-radius: 25px;
+	// border-radius: 25px;
 	position: fixed;
 	top: 25%;
 	left: 25%;
 	display: none;
 	text-align: center;
+	font-family: "Permanent Marker";
 	z-index: 1;
-	input, label {
+
+	.button {
 		display: inline-block;
+		font-family: "Permanent Marker";
 		margin: 5px auto;
 	}
 	#close, #close2{
 		right: 15px;
 		top: 10px;
-		font-family: 'Montserrat';
+		font-family: 'Permanent Marker';
 		position: absolute;
 		cursor: pointer;
 	}
 }
+#signup {
+	display: inline-block;
+	font-family: "Permanent Marker";
+	text-align: center;
+	background: lighten(#452ADE, 3%);  
+    border: 1px solid darken(#452ADE, 4%);
+    box-shadow: 0px 2px 0 darken (#452ADE, 5%), 2px 4px 6px darken(#452ADE, 2%);
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: all 150ms linear;
+    cursor: pointer;
+  }
+
+  #signup:hover {
+    background: darken(#452ADE, 1.5%);
+    border: 1px solid rgba(#000, .05);
+    box-shadow: 1px 1px 2px rgba(#fff, .2);
+    color: lighten(gray, 18%); 
+    text-decoration: none;
+    text-shadow: -1px -1px 0 darken(#452ADE, 9.5%);
+    cursor: pointer;
+    transition: all 250ms linear;
+  }
+#signin {
+	display: inline-block;
+	font-family: "Permanent Marker";
+	text-align: center;
+	background: lighten(#452ADE, 3%);  
+    border: 1px solid darken(#452ADE, 4%);
+    box-shadow: 0px 2px 0 darken (#452ADE, 5%), 2px 4px 6px darken(#452ADE, 2%);
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: all 150ms linear;
+    cursor: pointer;
+  }
+
+  #signin:hover {
+    background: darken(#452ADE, 1.5%);
+    border: 1px solid rgba(#000, .05);
+    box-shadow: 1px 1px 2px rgba(#fff, .2);
+    color: lighten(gray, 18%); 
+    text-decoration: none;
+    text-shadow: -1px -1px 0 darken(#452ADE, 9.5%);
+    cursor: pointer;
+    transition: all 250ms linear;
+  }
 
 
-
-
+ 
