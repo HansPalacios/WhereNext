@@ -5,7 +5,10 @@
 	margin:0;
 	padding: 0;
 }
-
+a {
+		text-decoration-line: none;
+		text-decoration-color: none;
+}
 header {
 	height: 150px;
 	width: 100%;
@@ -17,8 +20,6 @@ header {
 		font-family: "Permanent Marker";
 	}
 	a {
-		text-decoration-line: none;
-		text-decoration-color: none;
 		width: 150px;
 		border: 1px solid black;
 		color: white;

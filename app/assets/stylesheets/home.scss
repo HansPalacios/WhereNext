@@ -21,7 +21,7 @@
     	width:200px;
     	height:20px;
     	margin-top: 300px;
-    	margin-left: 30px
+    	margin-left: 10px
 	}
 	}
 	.border2 {
@@ -33,6 +33,7 @@
 		background: linear-gradient(90deg, #000, #444);
 		h2 {
 			color: white;
+
 		}
 		.rotate {
 			writing-mode:tb-rl;
@@ -44,6 +45,42 @@
    	 	margin-top: 150px;
    	 	margin-left: 30px
 	}
+	}
+	#map {
+		background-color: silver;
+		display: inline-block;
+		width: 500px;
+		height: 500px;
+		right: 0;
+	}
+	#list {
+		background-color: #319;
+		display: none;
+		width: 500px;
+		height: 500px;
+		right: 0;
+	}
+	#fav {
+		width: 100%;
+		#closefav {
+			right: 15px;
+			top: 10px;
+			font-family: 'Montserrat';
+			position: absolute;
+			cursor: pointer;
+			display: none;
+		}
+		#favbar {
+			width: 50px;
+			height: 500px;
+			background-color: white;
+			display: none;
+			margin: 50px;
+		}
+	}
+	#openfav, #openlist, #openmap {
+		// height: 100%;
+		width: 100%;
 	}
 }
 
