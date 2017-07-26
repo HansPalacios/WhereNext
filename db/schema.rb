@@ -10,7 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725191918) do
+ActiveRecord::Schema.define(version: 20170725193527) do
+
+  create_table "bars", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "phone_number"
+    t.integer "avg_rating"
+    t.integer "rating_id"
+    t.boolean "music"
+    t.boolean "sports"
+    t.boolean "dancing"
+    t.boolean "beer"
+    t.boolean "cocktails"
+    t.boolean "wine"
+    t.boolean "rooftop"
+    t.boolean "cheap_food"
+    t.integer "food"
+    t.boolean "dress_code"
+    t.boolean "line"
+    t.integer "popular_nights"
+    t.boolean "karaoke"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "bar_id"
+    t.integer "user_id"
+    t.integer "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bar_id"], name: "index_ratings_on_bar_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
