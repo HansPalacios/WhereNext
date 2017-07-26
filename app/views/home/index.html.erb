@@ -1,16 +1,19 @@
 
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Work+Sans" rel="stylesheet">
 <div class="row home">
-	<div class="col-md-1 border" id="openfav">
-		<h2 class="rotate">Favorites</h2>
-	</div>
+	<a href="#" class="col-md-1 border" id="fav">
+			<div id="closefav">x</div>
+			<h2 class="rotate">Favorites</h2>
+			<div id="favbar">
+			</div>
+	</a>
 	<div class="col-md-1">
-		<div class="row border2">
-			<h2 class="rotate">List</h2>
-		</div>
-		<div class="row border2">
-			<h2 class="rotate">Map</h2>
-		</div>
+		<a href="#" class="row border2" id="openlist">
+				<h2 class="rotate">List</h2>
+		</a>
+		<a href="#" class="row border2" id="openmap">
+				<h2 class="rotate">Map</h2>
+		</a>
 	</div>
 	
 	<%= render '/home/list' %>

@@ -23,9 +23,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	signin.addEventListener('click', function(){
 	    sibox.style.display = 'block';
+			subox.style.display = 'none';
+
 	});
 	signup.addEventListener('click', function(){
 	    subox.style.display = 'block';
+	    sibox.style.display = 'none';
+
 	});
 	close.addEventListener('click', function() {
 			sibox.style.display = 'none';
