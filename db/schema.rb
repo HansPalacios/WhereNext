@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170725193527) do
     t.string "name"
     t.string "address"
     t.string "phone_number"
+    t.string "description"
     t.integer "avg_rating"
     t.integer "rating_id"
     t.boolean "music"
@@ -26,40 +27,40 @@ ActiveRecord::Schema.define(version: 20170725193527) do
     t.boolean "wine"
     t.boolean "rooftop"
     t.boolean "cheap_food"
-    t.integer "food"
     t.boolean "dress_code"
     t.boolean "line"
     t.integer "popular_nights"
     t.boolean "karaoke"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    # t.datetime "created_at", null: false
+    # t.datetime "updated_at", null: false
   end
 
   create_table "ratings", force: :cascade do |t|
     t.integer "bar_id"
     t.integer "user_id"
     t.integer "rating"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["bar_id"], name: "index_ratings_on_bar_id"
-    t.index ["user_id"], name: "index_ratings_on_user_id"
+    # t.datetime "created_at", null: false
+    # t.datetime "updated_at", null: false
+    # t.index ["bar_id"], name: "index_ratings_on_bar_id"
+    # t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.string "password", default: "", null: false
+    # t.string "reset_password_token"
+    # t.datetime "reset_password_sent_at"
+    # t.datetime "remember_created_at"
+    # t.integer "sign_in_count", default: 0, null: false
+    # t.datetime "current_sign_in_at"
+    # t.datetime "last_sign_in_at"
+    # t.string "current_sign_in_ip"
+    # t.string "last_sign_in_ip"
+    # t.datetime "created_at", null: false
+    # t.datetime "updated_at", null: false
+    t.boolean "admin"
+  #   t.index ["email"], name: "index_users_on_email", unique: true
+  #   t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
