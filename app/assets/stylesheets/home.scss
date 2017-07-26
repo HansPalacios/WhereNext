@@ -1,3 +1,41 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home {
+	width: 100%;
+	.border {
+		border-top: 0 solid white;
+		border-left: 0 solid white;
+		border-right: 1px solid black;
+		border-bottom: 1px solid black;
+		height: 600px;
+		.rotate {
+			writing-mode:tb-rl;
+    	transform: rotate(-180deg);
+    	white-space:nowrap;
+    	bottom:0;
+    	width:200px;
+    	height:20px;
+    	margin-top: 300px;
+    	margin-left: 30px;
+	}
+	}
+	.border2 {
+		border-top: 0 solid white;
+		border-left: 0 solid white;
+		border-right: 1px solid black;
+		border-bottom: 1px solid black;
+		height: 300px;
+		.rotate {
+			writing-mode:tb-rl;
+   	 	transform: rotate(-180deg);
+   	 	white-space:nowrap;
+   	 	bottom:0;
+   	 	width:200px;
+   	 	height:20px;
+   	 	margin-top: 150px;
+   	 	margin-left: 30px;
+	}
+	}
+}
+
