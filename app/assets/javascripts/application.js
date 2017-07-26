@@ -11,5 +11,18 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
+
+document.addEventListener('DOMContentLoaded', function () {
+	var signin = document.getElementById( 'signin' )
+	var sibox = document.getElementById( 'sibox' )
+	var signup = document.getElementById( 'signup' )
+	var subox = document.getElementById( 'subox' )
+
+	signin.addEventListener('click', function(){
+	    sibox.style.display = 'block';
+	});
+	signup.addEventListener('click', function(){
+	    subox.style.display = 'block';
+	});
+});
