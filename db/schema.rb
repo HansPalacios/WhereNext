@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20170725193527) do
     t.string "name"
     t.string "address"
     t.string "phone_number"
-    t.string "description"
     t.integer "avg_rating"
     t.integer "rating_id"
     t.boolean "music"
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170725193527) do
     t.boolean "wine"
     t.boolean "rooftop"
     t.boolean "cheap_food"
+    t.integer "food"
     t.boolean "dress_code"
     t.boolean "line"
     t.integer "popular_nights"
@@ -37,12 +37,16 @@ ActiveRecord::Schema.define(version: 20170725193527) do
     t.integer "bar_id"
     t.integer "user_id"
     t.integer "rating"
+    t.index ["bar_id"], name: "index_ratings_on_bar_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "password", default: "", null: false
     t.boolean "admin"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index [nil], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
