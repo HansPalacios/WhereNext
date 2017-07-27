@@ -3,7 +3,9 @@
 		 <style media="screen">
 		  .bar-<%= bar.id %> { background-image: url(<%= bar.image %>); }
 		</style>
-		<%= link_to bar do
-			tag.article "", :class => " bar bar-#{bar.id}" end %>
+		<div class="barlist">
+			<%= link_to bar do
+				tag.article "", :class => " bar bar-#{bar.id}" end %>
+		</div>
 	<% end %>
 </div>

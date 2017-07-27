@@ -6,8 +6,6 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-  #Paperclip
-  Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
   
   #Devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
