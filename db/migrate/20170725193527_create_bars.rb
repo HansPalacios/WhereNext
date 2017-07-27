@@ -2,6 +2,7 @@ class CreateBars < ActiveRecord::Migration[5.1]
   def change
     create_table :bars do |t|
       t.string :name
+      t.text :description
       t.string :address
       t.string :phone_number
       t.integer :avg_rating
@@ -19,8 +20,8 @@ class CreateBars < ActiveRecord::Migration[5.1]
       t.boolean :line
       t.integer :popular_nights
       t.boolean :karaoke
-
-      # t.timestamps
+      t.attachment :image
+      t.timestamps
     end
   end
 end

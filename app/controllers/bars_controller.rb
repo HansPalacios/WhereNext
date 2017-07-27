@@ -1,6 +1,5 @@
 class BarsController < ApplicationController
   before_action :set_bar, only: [:show, :edit, :update, :destroy]
-
   # GET /bars
   # GET /bars.json
   def index
