@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var fav = document.getElementById( 'fav' )
 	var closefav = document.getElementById( 'closefav' )
 	var home = document.getElementById( 'homebox' )
+	var changeview = document.getElementById( 'changeview' )
 
 	
 // favbar
@@ -34,13 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		event.preventDefault();
 	  map.style.display = 'block';
 	  list.style.display = 'none';
+	  changeview.style.background = 'silver'
+
 	});
 	
 // open list
 	openlist.addEventListener('click', function(event){
 		event.preventDefault();
-	   map.style.display = 'none';
-	   list.style.display = 'block';
+	  map.style.display = 'none';
+	  list.style.display = 'block';
+	  changeview.style.background = '#fff'
 	});
 
 });
