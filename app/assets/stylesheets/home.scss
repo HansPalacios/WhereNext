@@ -16,7 +16,7 @@
 			font-family: "Permanent Marker";
 		}
 		.rotate {
-			writing-mode:tb-rl;
+		writing-mode:tb-rl;
     	transform: rotate(-180deg);
     	white-space:nowrap;
     	bottom:0;
@@ -83,7 +83,7 @@
 		#closefav {
 			right: 15px;
 			top: 10px;
-			font-family: 'Montserrat';
+			font-family: 'Permanent Marker';
 			position: absolute;
 			cursor: pointer;
 			display: none;
