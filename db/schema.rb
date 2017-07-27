@@ -47,10 +47,6 @@ ActiveRecord::Schema.define(version: 20170726223842) do
 
   create_table "users", force: :cascade do |t|
     t.boolean "admin"
-<<<<<<< HEAD
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index [nil], name: "index_users_on_reset_password_token", unique: true
-=======
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -65,7 +61,6 @@ ActiveRecord::Schema.define(version: 20170726223842) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
->>>>>>> 3987c850f677ed929ae6a424cfc6603d3b89604c
   end
 
 end
