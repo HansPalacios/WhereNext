@@ -20,7 +20,7 @@ class CreateBars < ActiveRecord::Migration[5.1]
       t.boolean :line
       t.integer :popular_nights
       t.boolean :karaoke
-      t.attachment :image
+      t.string :image
       t.timestamps
     end
   end
