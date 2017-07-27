@@ -1,11 +1,37 @@
 <div id="list">
 	<% @bars.each do |bar| %>
-		 <style media="screen">
-		  .bar-<%= bar.id %> { background-image: url(<%= bar.image %>); }
-		</style>
-		<div class="barlist">
-			<%= link_to bar do
-				tag.article "", :class => " bar bar-#{bar.id}" end %>
+		<div class="row eachbar">
+			<div class="col-md-2">
+				 <style media="screen">
+				  .bar-<%= bar.id %> { background-image: url(<%= bar.image %>); }
+				</style>
+				<div class="barlist">
+					<%= link_to bar do
+						tag.article "", :class => " bar bar-#{bar.id}" end %>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<p><strong><em><%= bar.name %></em></strong></p>
+				<p><%= bar.address %></p>
+				<p><%= bar.phone_number %></p>
+			</div>
+			<div class="col-md-3">
+				<p><%= bar.description %></p>
+			</div>
+			<div class="col-md-2">
+				<p><strong>Amenities:</strong></p>
+			<%= output_attributes bar %>
+			</div>
+			<div class="col-md-2">
+				<p><strong>Popular Nights:</strong></p>
+				<div id="popnights">
+					<%= bar.popular_nights %>
+				</div>
+			</div>
+			<div class="col-md-1" id="rating">
+				<p><strong>Rating<br>(1-10):</strong></p>
+				<p><%= bar.rating_id %></p>
+			</div>
 		</div>
 	<% end %>
 </div>

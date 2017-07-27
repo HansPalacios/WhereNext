@@ -1,3 +1,37 @@
 // Place all the styles related to the Bars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.showbar {
+	margin: 50px;
+	width: 90%;
+	height: 90%;
+	background-color: rgba(100,100,100,.2);
+	text-align: center;
+	padding: 20px;
+	.image {
+		max-width: 500px;
+	}
+	h2 {
+		width: 100%;
+	}
+	.row {
+		margin-top: 20px;
+		p {
+			text-align: center;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+	.desc {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+	.links {
+		text-align: center;
+		a {
+			text-align: center;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	}
+}
