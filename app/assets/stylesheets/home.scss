@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .home {
 	width: 100%;
+	margin: 0;
 	.border {
 		border-top: 0 solid white;
 		border-left: 0 solid white;
@@ -22,7 +23,7 @@
     	width:200px;
     	height:20px;
     	margin-top: 300px;
-    	margin-left: 10px
+    	margin-left: 10%;
 	}
 	}
 	.border2 {
@@ -44,22 +45,38 @@
    	 	width:200px;
    	 	height:20px;
    	 	margin-top: 150px;
-   	 	margin-left: 30px;
+   	 	margin-left: 20%;
 	}
 	}
 	#map {
 		background-color: silver;
-		display: inline-block;
-		width: 500px;
-		height: 500px;
+		display: none;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		z-index: 1;
 		right: 0;
+		top: 0;
 	}
 	#list {
-		background-color: #319;
-		display: none;
-		width: 500px;
-		height: 500px;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		z-index: 1;
 		right: 0;
+		top: 0;
+		.bar {
+			display: inline-block;
+			width: 300px;
+			height: 300px;
+			background-size: cover;
+			margin: 10px;
+  		&:hover {
+  		  background-color: #fff;
+  		  opacity:.8;
+  		}
+		}
 	}
 	#fav {
 		width: 100%;
@@ -70,18 +87,24 @@
 			position: absolute;
 			cursor: pointer;
 			display: none;
+			color: white;
 		}
 		#favbar {
-			width: 50px;
+			width: 100px;
 			height: 500px;
-			background-color: white;
+			border: 1px solid black;
 			display: none;
 			margin: 50px;
+			margin-top: -270px;
+			z-index: 1;
 		}
 	}
 	#openfav, #openlist, #openmap {
 		// height: 100%;
 		width: 100%;
+	}
+	#homebox {
+		padding: 0;
 	}
 }
 
