@@ -22,12 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	var close2 = document.getElementById( 'close2' )
 
 	signin.addEventListener('click', function(){
-	    sibox.style.display = 'block';
+	    sibox.style.display = 'inline-block';
 			subox.style.display = 'none';
 
 	});
 	signup.addEventListener('click', function(){
-	    subox.style.display = 'block';
+			console.log()
+	    subox.style.display = 'inline-block';
 	    sibox.style.display = 'none';
 
 	});

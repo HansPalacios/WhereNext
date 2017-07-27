@@ -1,5 +1,3 @@
-
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Work+Sans" rel="stylesheet">
 <div class="row home">
 	<a href="#" class="col-md-1 border" id="fav">
 			<div id="closefav">x</div>
@@ -15,8 +13,8 @@
 				<h2 class="rotate">Map</h2>
 		</a>
 	</div>
-	
-	<%= render '/home/list' %>
- 	<%= render '/home/map' %>
-
+	<div class="col-md-10" id="homebox">
+		<%= render '/home/list' %>
+	 	<%= render '/home/map' %>
+ 	</div>
 </div>

@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725193527) do
+ActiveRecord::Schema.define(version: 20170727143611) do
 
   create_table "bars", force: :cascade do |t|
     t.string "name"
+    t.text "description"
     t.string "address"
     t.string "phone_number"
     t.integer "avg_rating"
@@ -31,6 +32,13 @@ ActiveRecord::Schema.define(version: 20170725193527) do
     t.boolean "line"
     t.integer "popular_nights"
     t.boolean "karaoke"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -42,11 +50,26 @@ ActiveRecord::Schema.define(version: 20170725193527) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "password", default: "", null: false
     t.boolean "admin"
+<<<<<<< HEAD
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index [nil], name: "index_users_on_reset_password_token", unique: true
+=======
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+>>>>>>> 3987c850f677ed929ae6a424cfc6603d3b89604c
   end
 
 end

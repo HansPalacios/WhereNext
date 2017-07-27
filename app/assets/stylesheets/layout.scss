@@ -12,7 +12,7 @@ a {
 header {
 	height: 150px;
 	width: 100%;
-	background: linear-gradient(90deg, #000, #000, #452ADE);
+	background: linear-gradient(90deg, #000, #000, #3b0071);
 	padding: 40px;
 	h1 {
 		margin: 10px;
@@ -36,6 +36,12 @@ header {
 .container-fluid {
 	padding: 0;
 }
+#sibox{
+	display: none;
+}
+#subox {
+	display: none;
+}
 #sibox, #subox{
 	width: 600px;
 	height: 300px;
@@ -46,10 +52,9 @@ header {
 	position: fixed;
 	top: 25%;
 	left: 25%;
-	display: none;
 	text-align: center;
 	font-family: "Permanent Marker";
-	z-index: 1;
+	z-index: 2;
 
 	.button {
 		-webkit-appearance: button;
@@ -89,12 +94,12 @@ header {
 	font-family: "Permanent Marker";
 	text-align: center;
 	background: lighten(#452ADE, 3%);  
-    border: 1px solid darken(#452ADE, 4%);
-    box-shadow: 0px 2px 0 darken (#452ADE, 5%), 2px 4px 6px darken(#452ADE, 2%);
-    font-weight: 900;
-    letter-spacing: 1px;
-    transition: all 150ms linear;
-    cursor: pointer;
+  border: 1px solid darken(#452ADE, 4%);
+  box-shadow: 0px 2px 0 darken (#452ADE, 5%), 2px 4px 6px darken(#452ADE, 2%);
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+  cursor: pointer;
   }
 
   #signup:hover {
@@ -112,12 +117,12 @@ header {
 	font-family: "Permanent Marker";
 	text-align: center;
 	background: lighten(#452ADE, 3%);  
-    border: 1px solid darken(#452ADE, 4%);
-    box-shadow: 0px 2px 0 darken (#452ADE, 5%), 2px 4px 6px darken(#452ADE, 2%);
-    font-weight: 900;
-    letter-spacing: 1px;
-    transition: all 150ms linear;
-    cursor: pointer;
+  border: 1px solid darken(#452ADE, 4%);
+  box-shadow: 0px 2px 0 darken (#452ADE, 5%), 2px 4px 6px darken(#452ADE, 2%);
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+  cursor: pointer;
   }
   #signin:hover {
     background: darken(#452ADE, 1.5%);
