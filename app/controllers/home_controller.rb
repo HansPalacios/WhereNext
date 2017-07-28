@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
 	def index
     	@bars = Bar.all
-	end
+    	# @favorites = Favorites.all
+	end         
 end

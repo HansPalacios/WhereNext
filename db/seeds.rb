@@ -50,8 +50,8 @@ Bar.create([
 	])
 
 User.create([
-	{email: "hanssebastian.p@gmail.com", password: "pineapple", admin: true},
-	{email: "erinkarlayoung@gmail.com", password: "12345678", admin: true}
+	{username: "Hans", email: "hanssebastian.p@gmail.com", password: "password", admin: true},
+	{username: "Erin", email: "erinkarlayoung@gmail.com", password: "12345678", admin: true}
 	])
 
 Rating.create([
