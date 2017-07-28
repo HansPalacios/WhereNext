@@ -5,12 +5,12 @@
 	width: 100%;
 	margin: 0;
 	#fav {
-		border-top: 0 solid white;
-		border-left: 0 solid white;
-		border-right: 1px solid black;
-		border-bottom: 1px solid black;
+		// border-top: 0 solid white;
+		// border-left: 0 solid white;
+		// border-right: 1px solid black;
+		// border-bottom: 1px solid #6b6969;
 		height: 676px;
-		background: linear-gradient(90deg, #000, #777);
+		background: linear-gradient(90deg, #22002d, #777);
 		h2 {
 			color: white;
 			font-family: "Permanent Marker";
@@ -28,13 +28,14 @@
 	}
 	#changeview {
 		background-color: silver;
+		height: 676px;
 		.openlist, .openmap {
-			border-top: 0 solid white;
-			border-left: 0 solid white;
-			border-right: 1px solid black;
-			border-bottom: 1px solid black;
+			border-top: 0 solid #6b6969;
+			// border-left: 0 solid white;
+			// border-right: 1px solid black;
+			border-bottom: 1px solid #6b6969;
 			height: 338px;
-			background: linear-gradient(90deg, #000, #444);
+			background: linear-gradient(90deg, #22002d, #949494);
 			h2 {
 				color: white;
 				font-family: "Permanent Marker";
