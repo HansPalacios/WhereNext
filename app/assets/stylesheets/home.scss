@@ -16,7 +16,7 @@
 			font-family: "Permanent Marker";
 		}
 		.rotate {
-		  writing-mode:tb-rl;
+			writing-mode:tb-rl;
     	transform: rotate(-180deg);
     	white-space:nowrap;
     	bottom:0;
@@ -145,7 +145,7 @@
 .home2 {
 	width: 100%;
 	margin: 0;
-  display: none;
+	display: none;
 	#changeview {
 		background-color: silver;
 		.openlist, .openmap {
