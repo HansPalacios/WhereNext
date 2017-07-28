@@ -1,9 +1,6 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.home2 {
-	display: none;
-}
 .home {
 	width: 100%;
 	margin: 0;
@@ -19,7 +16,7 @@
 			font-family: "Permanent Marker";
 		}
 		.rotate {
-		writing-mode:tb-rl;
+			writing-mode:tb-rl;
     	transform: rotate(-180deg);
     	white-space:nowrap;
     	bottom:0;
@@ -150,6 +147,7 @@
 .home2 {
 	width: 100%;
 	margin: 0;
+	display: none;
 	#changeview {
 		background-color: silver;
 		.openlist, .openmap {
