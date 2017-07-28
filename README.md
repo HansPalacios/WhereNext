@@ -1,13 +1,17 @@
-# README
+# README for Where Next
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+*Using ruby version 5.0.0
+*Using CarrierWave 1.0.0 instead of paperclip for uploading images
 
-* Ruby version
+For our Database we have a User and Bar table, and between them 
+we have a many to many relationship with Ratings and Favorites
+
+We are also using devise for our user sessions
 
 * System dependencies
+gem 'carrierwave', '~> 1.0'
+gem 'devise'
 
 * Configuration
 

@@ -12,6 +12,10 @@ a {
 .container-fluid {
 	padding: 0;
 }
+.notice, .alert {
+	font-family: "Oswald";
+	color: #452ADE;
+}
 header {
 	height: 150px;
 	width: 100%;
@@ -32,7 +36,7 @@ header {
 	}
 	#session_links {
 		width: 380px;
-		margin-right: 10%;
+		margin-left: 20%;
 		a {
 			width: 150px;
 			border: 1px solid black;
