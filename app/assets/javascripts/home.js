@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-	var openlist = document.getElementById( 'openlist' )
-	var list = document.getElementById( 'list' )
-	var openmap = document.getElementById( 'openmap' )
-	var map = document.getElementById( 'map' )
+	var openlists = document.querySelectorAll( '.openlist' )
+	var list = document.querySelector( '.list' )
+	var list2 = document.querySelector( '.list2' )
+	var openmaps = document.querySelectorAll( '.openmap' )
+	var maps = document.querySelectorAll( '.map' )
 	var fav = document.getElementById( 'fav' )
 	var closefav = document.getElementById( 'closefav' )
 	var home = document.getElementById( 'homebox' )
@@ -30,21 +31,33 @@ document.addEventListener('DOMContentLoaded', function () {
 		home.classList.remove('col-md-9');
 	});
 
-// open map
-	openmap.addEventListener('click', function(event){
-		event.preventDefault();
-	  map.style.display = 'block';
-	  list.style.display = 'none';
-	  changeview.style.background = 'silver'
-
+	// open map
+	openmaps.forEach( function (openmap) {
+		console.log(openmap)
+		openmap.addEventListener('click', function(event){
+			console.log(event)
+			event.preventDefault();
+			maps.forEach( function (map) {
+		  	map.style.display = 'block';
+		  });
+		  list.style.display = 'none';
+		  list2.style.display = 'none';
+		  changeview.style.background = 'silver';
+		});
 	});
-	
-// open list
-	openlist.addEventListener('click', function(event){
-		event.preventDefault();
-	  map.style.display = 'none';
-	  list.style.display = 'block';
-	  changeview.style.background = '#fff'
+		
+	// open list
+	openlists.forEach( function (openlist) {
+		console.log(openlist)
+		openlist.addEventListener('click', function(event){
+			console.log(event)
+			event.preventDefault();
+			maps.forEach( function (map) {
+		  	map.style.display = 'none';
+		  });
+		  list.style.display = 'inline-block';
+		  list2.style.display = 'inline-block';
+		  changeview.style.background = '#fff'
+		});
 	});
-
 });
