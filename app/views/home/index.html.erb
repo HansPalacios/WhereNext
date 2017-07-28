@@ -1,15 +1,14 @@
 <div class="row home">
-	<a href="#" class="col-md-1 border" id="fav">
+	<a href="#" class="col-md-1" id="fav">
 			<div id="closefav">x</div>
 			<h2 class="rotate">Favorites</h2>
-			<div id="favbar">
-			</div>
+			<div id="favbar"></div>
 	</a>
 	<div class="col-md-1" id="changeview">
-		<a href="#" class="row border2" id="openlist">
+		<a href="#" class="row openlist">
 				<h2 class="rotate">List</h2>
 		</a>
-		<a href="#" class="row border2" id="openmap">
+		<a href="#" class="row openmap">
 				<h2 class="rotate">Map</h2>
 		</a>
 	</div>
@@ -23,21 +22,22 @@
 <div class="row home2">
 	<div class="col-md-12">
 		<a href="#" class="row" id="fav2">
+			<div class="col-md-12">
 				<div id="closefav2">x</div>
 				<h2>Favorites</h2>
-				<div id="favbar2">
-				</div>
+				<div id="favbar2"></div>
+			</div>
 		</a>
-		<div class="row" id="changeview2">
-			<a href="#" class="col-md-6 border2" id="openlist">
-					<h2 class="rotate">List</h2>
+		<div class="row" id="changeview">
+			<a href="#" class="openlist">
+					<h2>List</h2>
 			</a>
-			<a href="#" class="col-md-6 border2" id="openmap">
-					<h2 class="rotate">Map</h2>
+			<a href="#" class="openmap">
+					<h2>Map</h2>
 			</a>
 		</div>
-		<div class="row" id="homebox">
-			<%= render '/home/list' %>
+		<div class="row" class="homebox">
+			<%= render '/home/list2' %>
 		 	<%= render '/home/map' %>
 	 	</div>
 	</div>
