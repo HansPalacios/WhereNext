@@ -4,24 +4,6 @@
 .home {
 	width: 100%;
 	margin: 0;
-	#fav {
-		height: 676px;
-		background: linear-gradient(90deg, #000, #222);
-		h2 {
-			color: white;
-			font-family: "Permanent Marker";
-		}
-		.rotate {
-			writing-mode:tb-rl;
-    	transform: rotate(-180deg);
-    	white-space:nowrap;
-    	bottom:0;
-    	width:200px;
-    	height:20px;
-    	margin-top: 300px;
-    	margin-left: 10%;
-	}
-	}
 	#changeview {
 		background-color: silver;
 		height: 676px;
@@ -48,7 +30,7 @@
 	}
 	.map {
 		background-color: silver;
-		display: inline-block;
+		display: none;
 		text-align: center;
 		width: 100%;
 		height: 676px;
@@ -60,9 +42,16 @@
 		img {
 			max-height: 1300px;
 		}
+		.mapmodal {
+			display: fixed;
+			height: 80%;
+			width: 80%;
+			margin: 100px auto;
+			display: none;
+		}
 	}
 	.list {
-		display: none;
+		display: inline-block;
 		width: 100%;
 		height: 676px;
 		padding: 0;
@@ -71,6 +60,19 @@
 		top: 0;
 		overflow-y: scroll;
 		overflow-x: hidden;
+		#stars {
+			height: 29.47px;
+			width: 115px;
+			background-image: url('starlist3.png');
+			background-position: left;
+			background-size: 115px 29.47px;
+			overflow: hidden;
+		}
+		#addfav {
+				height: 20px;
+				display: inline-block;
+				margin-left: 10px;
+			}
 		.eachbar {
 			border-bottom: 1px solid grey;
 			border-top: 1px solid grey;
@@ -105,6 +107,27 @@
 	}
 	#fav {
 		width: 100%;
+		height: 676px;
+		position: relative;
+		background: linear-gradient(90deg, #000, #222);
+		padding:0;
+		h2 {
+			color: white;
+			font-family: "Permanent Marker";
+		}
+		.rotate {
+			writing-mode:tb-rl;
+    	transform: rotate(-180deg);
+    	white-space:nowrap;
+    	bottom:0;
+    	width:200px;
+    	height:20px;
+    	margin-top: 300px;
+    	margin-left: 2%;
+    	margin-right: 0;
+    	z-index:0;
+    	position: relative;
+		}
 		#closefav {
 			right: 15px;
 			top: 10px;
@@ -115,131 +138,22 @@
 			color: white;
 		}
 		#favbar {
-			width: 100px;
-			height: 500px;
-			border: 1px solid black;
-			display: none;
-			margin: 50px;
-			margin-top: -270px;
-			z-index: 1;
-		}
-	}
-	#openfav, .openlist, .openmap {
-		// height: 100%;
-		width: 100%;
-	}
-	#homebox {
-		padding: 0;
-	}
-}
-
-
-// ***********************************************
-
-
-// mobile view of home page
-.home2 {
-	width: 100%;
-	margin: 0;
-	display: none;
-	#changeview {
-		background-color: silver;
-		.openlist, .openmap {
-			border-top: 0 solid white;
-			border-left: 0 solid white;
-			border-right: 1px solid black;
-			width: 50%;
-			height: 40px;
-			background: linear-gradient( #000, #444);
-			text-align: center;
-			h2 {
-				color: white;
-				font-family: "Permanent Marker";
-			}
-		}
-	}
-	.map {
-		background-color: silver;
-		display: inline-block;
-		text-align: center;
-		width: 100%;
-		height: 100%;
-		padding: 10px;
-		z-index: 1;
-		right: 0;
-		top: 0;
-		img {
-			max-height: 650px;
-		}
-	}
-	.list2 {
-		display: none;
-		width: 100%;
-		height: 676px;
-		padding: 5px;;
-		z-index: 1;
-		right: 0;
-		top: 0;
-		overflow-y: scroll;
-		overflow-x: hidden;
-		.barlist {
-			padding: 10px;
-		}
-		.eachbar {
-			border-bottom: 1px solid grey;
-			border-top: 1px solid grey;
-			padding: 10px;
-		}
-		.bar {
-			display: inline-block;
 			width: 150px;
-			height: 150px;
-			background-size: cover;
-			margin: 10px;
-  		&:hover {
-  		  background-color: #fff;
-  		  opacity:.8;
-  		}
-		}
-		p {
-			margin-top: 10px;
-		}
-		#popnights {
-			line-height: 20px;
-			margin-top: 10px;
-		}
-		#rating {
-			text-align: center;
-			em {
-				font-size: 13px;
-			}
-		}
-	}
-	#fav2 {
-		height: 40px;
-		background: linear-gradient(#000, #777);
-		text-align: center;
-		h2 {
-			color: white;
-			font-family: "Permanent Marker";
-		}
-		#closefav2 {
-			right: 15px;
-			top: 10px;
-			font-family: 'Permanent Marker';
-			position: absolute;
-			cursor: pointer;
-			display: none;
-			color: white;
-		}
-		#favbar2 {
-			width: 100px;
 			height: 500px;
-			border: 1px solid black;
+			// border: 1px solid black;
 			display: none;
 			margin: 50px;
+			position: absolute;
 			margin-top: -270px;
 			z-index: 1;
+			margin-right: 3%;
+			overflow: scroll;
+			padding: 10px;
+		}
+		h4 {
+			margin-bottom: 20px;
+			color: white;
+			// font-family: 'Permanent Marker';
 		}
 	}
 	#openfav, .openlist, .openmap {
@@ -248,17 +162,5 @@
 	}
 	#homebox {
 		padding: 0;
-	}
-}
-
-@media only screen and (max-width: 780px) {
-  .home {
-		display: none;
-	}
-	.home2 {
-		display: inline-block;
-	}
-	.map {
-		overflow: scroll;
 	}
 }

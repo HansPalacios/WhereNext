@@ -4,13 +4,13 @@ class BarsController < ApplicationController
   # GET /bars.json
   def index
     @bars = Bar.all
-    @favorites = Favorites.all
+    @favorites = Favorite.all
   end
 
   # GET /bars/1
   # GET /bars/1.json
   def show
-    @favorites = Favorites.all
+    @favorites = Favorite.all
   end
 
   # GET /bars/new

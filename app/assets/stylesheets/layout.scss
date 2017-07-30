@@ -35,8 +35,10 @@ header {
 		vertical-align: center;
 	}
 	#session_links {
-		width: 380px;
+		width: 350px;
 		margin-left: 20%;
+		margin: 10px;
+		overflow: hidden;
 		a {
 			width: 150px;
 			border: 1px solid black;

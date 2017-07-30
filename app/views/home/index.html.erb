@@ -1,9 +1,7 @@
 <div class="row home">
-	<a href="#" class="col-md-1" id="fav">
-			<div id="closefav">x</div>
-			<h2 class="rotate">Favorites</h2>
-			<div id="favbar"></div>
-	</a>
+	<% if user_signed_in? %>
+		<%= render '/home/fav' %>
+	<% end %>
 	<div class="col-md-1" id="changeview">
 		<a href="#" class="row openlist">
 				<h2 class="rotate">List</h2>
@@ -12,22 +10,21 @@
 				<h2 class="rotate">Map</h2>
 		</a>
 	</div>
-	<div class="col-md-10" id="homebox">
-		<%= render '/home/list' %>
-	 	<%= render '/home/map' %>
- 	</div>
+	<% if user_signed_in? %>
+		<div class="col-md-10" id="homebox">
+	<% else %>
+		<div class="col-md-11" id="homebox">
+	<% end %>
+			<%= render '/home/list' %>
+		 	<%= render '/home/map' %>
+	 	</div>
 </div>
 
+<!-- ****************** Mobile View ****************** -->
 
 <div class="row home2">
 	<div class="col-md-12">
-		<a href="#" class="row" id="fav2">
-			<div class="col-md-12">
-				<div id="closefav2">x</div>
-				<h2>Favorites</h2>
-				<div id="favbar2"></div>
-			</div>
-		</a>
+		<%= render '/home/fav2' %>
 		<div class="row" id="changeview">
 			<a href="#" class="openlist">
 					<h2>List</h2>

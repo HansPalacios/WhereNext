@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bar_ratings
   root to: "home#index"
   resources :favorites
   devise_for :users

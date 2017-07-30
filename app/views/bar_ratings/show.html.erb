@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bar:</strong>
+  <%= @bar_rating.bar_id %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @bar_rating.rating_id %>
+</p>
+
+<%= link_to 'Edit', edit_bar_rating_path(@bar_rating) %> |
+<%= link_to 'Back', bar_ratings_path %>

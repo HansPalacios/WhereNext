@@ -1,6 +1,10 @@
 class Bar < ApplicationRecord
 	mount_uploader :image, ImageUploader
-  has_many :ratings
+  has_many :bar_ratings
+  has_many :ratings, through: :bar_ratings
+  has_many :favorites
+  has_many :users, through: :favorites
+  has_many :fans, through: :favorites, source: 'user'
   @@days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
   def self.attributes
