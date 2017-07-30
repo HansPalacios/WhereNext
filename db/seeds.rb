@@ -54,28 +54,200 @@ User.create([
 	{username: "Erin", email: "erinkarlayoung@gmail.com", password: "12345678", admin: true}
 	])
 
-Rating.create([
-	{bar_id: 1, user_id: 1, rating: 5},
-	{bar_id: 1, user_id: 1, rating: 3}
-	# {bar_id: 3, user_id: 1, stars: 3},
-	# {bar_id: 4, user_id: 1, stars: 4},
-	# {bar_id: 5, user_id: 1, stars: 5},
-	# {bar_id: 6, user_id: 1, stars: 5},
-	# {bar_id: 7, user_id: 2, stars: 3},
-	# {bar_id: 8, user_id: 2, stars: 4},
-	# {bar_id: 9, user_id: 2, stars: 4},
-	# {bar_id: 10, user_id: 2, stars: 5},
-	# {bar_id: 11, user_id: 2, stars: 4},
-	# {bar_id: 12, user_id: 2, stars: 5},
-	# {bar_id: 13, user_id: 2, stars: 3},
-	# {bar_id: 14, user_id: 2, stars: 5},
-	# {bar_id: 15, user_id: 2, stars: 4},
-	# {bar_id: 16, user_id: 2, stars: 2},
-	# {bar_id: 17, user_id: 2, stars: 3},
-	# {bar_id: 18, user_id: 2, stars: 4},
-	# {bar_id: 19, user_id: 2, stars: 5},
-	# {bar_id: 20, user_id: 2, stars: 4}
-	])
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(1)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(2)
+rate.bar = Bar.find(1)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(1)
+rate.bar = Bar.find(2)
+rate.save
+
+rate = Rating.new(rating: 4)
+rate.user = User.find(2)
+rate.bar = Bar.find(2)
+rate.save
+
+rate = Rating.new(rating: 2)
+rate.user = User.find(1)
+rate.bar = Bar.find(3)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(2)
+rate.bar = Bar.find(3)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(4)
+rate.save
+
+rate = Rating.new(rating: 4)
+rate.user = User.find(2)
+rate.bar = Bar.find(4)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(5)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(2)
+rate.bar = Bar.find(5)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(6)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(2)
+rate.bar = Bar.find(6)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(7)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(2)
+rate.bar = Bar.find(7)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(8)
+rate.save
+
+rate = Rating.new(rating: 1)
+rate.user = User.find(2)
+rate.bar = Bar.find(8)
+rate.save
+
+rate = Rating.new(rating: 4)
+rate.user = User.find(1)
+rate.bar = Bar.find(9)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(2)
+rate.bar = Bar.find(9)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(10)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(1)
+rate.bar = Bar.find(10)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(11)
+rate.save
+
+rate = Rating.new(rating: 4)
+rate.user = User.find(1)
+rate.bar = Bar.find(11)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(12)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(12)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(13)
+rate.save
+
+rate = Rating.new(rating: 2)
+rate.user = User.find(1)
+rate.bar = Bar.find(13)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(14)
+rate.save
+
+rate = Rating.new(rating: 4)
+rate.user = User.find(1)
+rate.bar = Bar.find(14)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(15)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(1)
+rate.bar = Bar.find(15)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(16)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(16)
+rate.save
+
+rate = Rating.new(rating: 4)
+rate.user = User.find(1)
+rate.bar = Bar.find(17)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(1)
+rate.bar = Bar.find(17)
+rate.save
+
+rate = Rating.new(rating: 4)
+rate.user = User.find(1)
+rate.bar = Bar.find(18)
+rate.save
+
+rate = Rating.new(rating: 3)
+rate.user = User.find(1)
+rate.bar = Bar.find(18)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(19)
+rate.save
+
+rate = Rating.new(rating: 5)
+rate.user = User.find(1)
+rate.bar = Bar.find(20)
+rate.save
+
+rate = Rating.new(rating: 4)
+rate.user = User.find(1)
+rate.bar = Bar.find(20)
+rate.save
 
 Favorite.create([
 	{user_id: 1, bar_id: 2},
