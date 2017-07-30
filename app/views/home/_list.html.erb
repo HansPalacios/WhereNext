@@ -14,11 +14,17 @@
 				</div>
 			</div>
 			<div class="col-md-2">
-				<p><strong><em><%= bar.name %></em></strong></p>
+					<% if user_signed_in? %>
+						<%= link_to '#' do %>
+   						<%= image_tag 'addfav.png', :id => 'addfav' %>
+						<% end %>
+					<% end %>
+					<p><strong><em><%= bar.name %></em></strong></p>
 				<p><%= bar.address %></p>
 				<p><%= bar.phone_number %></p>
 			</div>
 			<div class="col-md-3">
+				<div style="width:115px" id="stars"></div>
 				<p><%= bar.description %></p>
 			</div>
 			<div class="col-md-2">

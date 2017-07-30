@@ -1,0 +1,9 @@
+<a href="#" class="col-md-1" id="fav">
+			<div id="closefav">x</div>
+			<h2 class="rotate">Favorites</h2>
+			<div id="favbar">
+				<% @favorites.each do |favorite| %>
+						<h4><%= favorite.bar.name %></h4>
+				<% end %>
+			</div>
+	</a>

@@ -1,4 +1,5 @@
 class Rating < ApplicationRecord
   belongs_to :user
-  belongs_to :bar
+  has_many :bar_ratings
+  has_many :bars, through: :bar_ratings
 end

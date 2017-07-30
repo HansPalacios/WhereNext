@@ -14,7 +14,9 @@ gem 'carrierwave', '~> 1.0'
 gem 'devise'
 
 * Configuration
-
+    rails g scaffold bar 
+    rails g scaffold 
+    rails g scaffold bar_rating bar_id:integer rating_id:integer
 * Database creation
 
 * Database initialization

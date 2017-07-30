@@ -20,8 +20,8 @@
         <td><%= rating.bar_id %></td>
         <td><%= rating.user_id %></td>
         <td><%= rating.rating %></td>
-        <td><%= rating.user %></td>
-        <td><%= rating.bar %></td>
+        <td><%= rating.user.username %></td>
+        <td><%= rating.bars.name %></td>
         <td><%= link_to 'Show', rating %></td>
         <td><%= link_to 'Edit', edit_rating_path(rating) %></td>
         <td><%= link_to 'Destroy', rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>

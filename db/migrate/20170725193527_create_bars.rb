@@ -7,6 +7,7 @@ class CreateBars < ActiveRecord::Migration[5.1]
       t.string :phone_number
       t.integer :avg_rating
       t.integer :rating_id
+      t.integer :favorite_id
       t.boolean :music
       t.boolean :sports
       t.boolean :dancing

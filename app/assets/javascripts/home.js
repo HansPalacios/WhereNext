@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	
 // favbar
+	if( fav )
 	fav.addEventListener('click', function(event){
 		event.preventDefault();
 	  fav.classList.add('col-md-2');
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	  home.classList.add('col-md-9');
 		home.classList.remove('col-md-10');
 	});
+	if( closefav )
 	closefav.addEventListener('click', function(event){
 		event.preventDefault();
 		event.stopPropagation();

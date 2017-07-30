@@ -2,4 +2,47 @@
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 	<%= image_tag ( "WilliamsburgMap1.svg" )%>
+	<% @bars.each do |bar| %>
+		<div id="bar.image" class="mapmodal">
+			<div class="row showbar">
+			  <div class="col-md-12">
+			    <div class="row">
+			      <div class="col-md-6">
+			         <%= image_tag ( "#{bar.image}" ), :class => 'image' %>
+			      </div>
+			      <div class="col-md-6">
+			        <div class="row">
+			          <h2><strong><em><%= bar.name %></em></strong></h2>
+			        </div>
+			        <div class="row">
+			          <p><%= bar.address %></p>
+			          <p><%= bar.phone_number %></p>
+			        </div>
+			        <div class="row desc">
+			          <p><%= bar.description %></p>
+			        </div>
+			        <div class="row">
+			          <div class="col-md-4">
+			            <p><strong>Amenities:</strong></p>
+			            <%= output_attributes bar %>
+			          </div>
+			          <div class="col-md-5">
+			            <p><strong>Popular Nights:</strong></p>
+			            <div id="popnights">
+			              <%= bar.popular_nights %>
+			            </div>
+			          </div>
+			          <div class="col-md-3" id="rating">
+			            <p><strong>Rating<br>(1-10):</strong></p>
+			            <p><%= bar.rating_id %></p>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+
+		</div>
+	<% end %>
 </div>
