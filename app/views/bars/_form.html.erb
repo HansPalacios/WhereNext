@@ -27,16 +27,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :avg_rating %>
-    <%= form.number_field :avg_rating, id: :bar_avg_rating %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rating_id %>
-    <%= form.number_field :rating_id, id: :bar_rating_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :music %>
     <%= form.check_box :music, id: :bar_music %>
   </div>
@@ -77,11 +67,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :food %>
-    <%= form.number_field :food, id: :bar_food %>
-  </div>
-
-  <div class="field">
     <%= form.label :dress_code %>
     <%= form.check_box :dress_code, id: :bar_dress_code %>
   </div>
@@ -100,6 +85,8 @@
     <%= form.label :karaoke %>
     <%= form.check_box :karaoke, id: :bar_karaoke %>
   </div>
+
+  <%= form.file_field :image %>
 
   <div class="actions">
     <%= form.submit %>
