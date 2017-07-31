@@ -38,12 +38,17 @@
 		right: 0;
 		top: 0;
 		overflow-y: scroll;
+		cursor: pointer;
 		// overflow-x: hidden;
 		img {
 			max-height: 1100px;
 		}
 		.mapmodal {
+			display: none;
 			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: 1;
 			height: 80%;
 			width: 80%;
 			margin: 100px auto;
@@ -193,3 +198,7 @@
 		padding: 0;
 	}
 }
+
+
+
+

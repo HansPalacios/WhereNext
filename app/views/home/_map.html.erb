@@ -1,22 +1,35 @@
-<div class="map">
+<div id="map_daddy" class="map">
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 	<%# image_tag ( "WilliamsburgMap1.svg" )%>
 	<%= render 'home/map_image' %>
 
+	<!-- bar_summary_2 -->
+	<!-- bar_detail_2 -->
 	<!-- Hover modal -->
 	<% @bars.each do |bar| %>
-		<div id="<%= bar.image %>" class="maphover">
-			<div class="row">
-		    <div class="col-md-6">
-						<%= image_tag ( "#{bar.image}" ), :class => 'image' %>
-				</div>
-		    <div class="col-md-6">
-					<h3><%= bar.name %></h3>
-					<p><%= bar.address %></p>
-					<P><%= bar.phone_number %></P>
-				</div>
-			</div>
+		<div id="bar_summary_<%= bar.id %>" style="display:none;background-image:url(<%= "#{bar.image}" %>);" class="bar_summary container">
+			<h3><%= bar.name %></h3>
+			<p><%= bar.address %></p>
+			<p><%= bar.phone_number %></p>
 		</div>
 	<% end %>
 </div>
+<script>
+document.querySelectorAll(".bar_icon").forEach(function(icon){
+	let id = icon.id.slice(icon.id.lastIndexOf("_")+1),
+	    summary_name = "#bar_summary_"+id;
+	console.log("summary_name",summary_name);
+	icon.addEventListener("mouseover",function(event){
+	    let rect = icon.getBoundingClientRect(),
+	        modal = document.querySelector(summary_name);
+		console.log("summary_name",summary_name,document.querySelector(summary_name));
+		modal.style.display = "inline-block";
+		modal.style.top = Math.max(0,rect.top - 100) + "px";
+		modal.style.left = Math.max(0,rect.left - 150) + "px";
+	});
+	icon.addEventListener("mouseout",function(event){
+		document.querySelector(summary_name).style.display = "none";
+	});
+});
+</script>
