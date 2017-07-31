@@ -1,25 +1,25 @@
 class FavoritesController < ApplicationController
-  before_action :set_favorite, only: [:show, :edit, :update, :destroy]
+  before_action :set_favorite, only: [ :update, :destroy]
 
   # GET /favorites
   # GET /favorites.json
-  def index
-    @favorites = Favorite.all
-  end
+  # def index
+  #   @favorites = Favorite.all
+  # end
 
   # GET /favorites/1
   # GET /favorites/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /favorites/new
-  def new
-    @favorite = Favorite.new
-  end
+  # def new
+  #   @favorite = Favorite.new
+  # end
 
   # GET /favorites/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /favorites
   # POST /favorites.json
