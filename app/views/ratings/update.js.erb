@@ -1,0 +1,5 @@
+console.log(setStarRating)
+var el = document.querySelector("#bar_daddy_<%= @rating.bar_id %> .rating");
+el.setAttribute('data-default', <%= @rating.rating %>);
+setDefaultRating(el);
+el.style.display = "none"
