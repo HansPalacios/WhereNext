@@ -1,9 +1,9 @@
 <div class="list">
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-	<% @bars.each do |bar| 
-		 rating = bar.ratings.find_by(user_id: current_user.id) %>
-		<div class="row eachbar">
+	<% @bars.each do |bar| %>
+		 <%if user_signed_in? then rating = bar.ratings.find_by(user_id: current_user.id) end %>
+		<div id="bar_daddy_<%= bar.id %>" class="row eachbar">
 			<div class="col-md-3">
 				 <style media="screen">
 				  .bar-<%= bar.id %> { background-image: url(<%= bar.image %>); }
