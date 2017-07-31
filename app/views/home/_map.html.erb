@@ -1,7 +1,8 @@
 <div class="map">
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-	<%= image_tag ( "WilliamsburgMap1.svg" )%>
+	<%# image_tag ( "WilliamsburgMap1.svg" )%>
+	<%= render 'home/map_image' %>
 
 	<!-- Hover modal -->
 	<% @bars.each do |bar| %>
