@@ -2,6 +2,10 @@
 	<div class="col-md-12">
 		<div id="closefav2">x</div>
 		<h2>Favorites</h2>
-		<div id="favbar2"></div>
+		<div id="favbar2">
+			<% @favorites.each do |favorite| %>
+						<button id="<%= favorite.bar.image %>"><h4><%= favorite.bar.name %></h4></button>
+			<% end %>
+		</div>
 	</div>
 </a>

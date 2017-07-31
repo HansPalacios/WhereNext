@@ -35,9 +35,8 @@ header {
 		vertical-align: center;
 	}
 	#session_links {
-		width: 350px;
-		margin-left: 20%;
 		margin: 10px;
+		float: right;
 		overflow: hidden;
 		a {
 			width: 150px;
@@ -108,6 +107,17 @@ header {
 		transition: all 250ms linear;
 	}
 	#close, #close2{
+		right: 15px;
+		top: 10px;
+		font-family: 'Permanent Marker';
+		position: absolute;
+		cursor: pointer;
+	}
+}
+.maphover, .barmodal {
+	position: fixed;
+	display: none;
+	#close {
 		right: 15px;
 		top: 10px;
 		font-family: 'Permanent Marker';

@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	var maps = document.querySelectorAll( '.map' )
 	var fav = document.getElementById( 'fav' )
 	var closefav = document.getElementById( 'closefav' )
+	var favbar = document.getElementById( 'favbar' )
+	var fav2 = document.getElementById( 'fav2' )
+	var closefav2 = document.getElementById( 'closefav2' )
+	var favbar2 = document.getElementById( 'favbar2' )
 	var home = document.getElementById( 'homebox' )
 	var changeview = document.getElementById( 'changeview' )
 
@@ -17,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	  fav.classList.add('col-md-2');
 		fav.classList.remove('col-md-1');
 	  favbar.style.display = "inline-block";
+	  fav.style.cursor = 'default';
 	  closefav.style.display = "inline-block";
 	  home.classList.add('col-md-9');
 		home.classList.remove('col-md-10');
@@ -32,6 +37,28 @@ document.addEventListener('DOMContentLoaded', function () {
 	  home.classList.add('col-md-10');
 		home.classList.remove('col-md-9');
 	});
+	
+	// favbar mobileview
+	if( fav2 )
+	fav2.addEventListener('click', function(event){
+		event.preventDefault();
+	  favbar2.style.display = "inline-block";
+	  fav2.style.cursor = 'default';
+	  fav2.style.height =  '200px';
+	  closefav2.style.display = "inline-block";
+	});
+	if( closefav2 )
+	closefav2.addEventListener('click', function(event){
+		event.preventDefault();
+		event.stopPropagation();
+	  closefav2.style.display = "none";
+	  favbar2.style.display = "none";
+	  fav2.style.height =  '40px';
+	  fav2.style.cursor = 'pointer';
+
+	});
+
+
 
 	// open map
 	openmaps.forEach( function (openmap) {

@@ -24,7 +24,9 @@
 
 <div class="row home2">
 	<div class="col-md-12">
-		<%= render '/home/fav2' %>
+		<% if user_signed_in? %>
+			<%= render '/home/fav2' %>
+		<% end %>
 		<div class="row" id="changeview">
 			<a href="#" class="openlist">
 					<h2>List</h2>

@@ -5,7 +5,7 @@
 	width: 100%;
 	margin: 0;
 	#changeview {
-		background-color: silver;
+		background-color: #fff;
 		height: 676px;
 		.openlist, .openmap {
 			border-top: 0 solid #6b6969;
@@ -43,7 +43,7 @@
 			max-height: 1100px;
 		}
 		.mapmodal {
-			display: fixed;
+			position: fixed;
 			height: 80%;
 			width: 80%;
 			margin: 100px auto;
@@ -52,6 +52,7 @@
 		.maphover {
 			height: 100px;
 			width: 100px;
+			display: none;
 			position: element(#Target);
     	transform: translateY(-100%);
     	transform: translateX(100%);
@@ -149,7 +150,7 @@
 			color: white;
 		}
 		#favbar {
-			width: 150px;
+			width: 60%;
 			height: 500px;
 			// border: 1px solid black;
 			display: none;
@@ -161,10 +162,27 @@
 			overflow: scroll;
 			padding: 10px;
 		}
-		h4 {
+		button {
+			display: block;
 			margin-bottom: 20px;
-			color: white;
-			// font-family: 'Permanent Marker';
+			background-color: none;
+			background-color: Transparent;
+      background-repeat:no-repeat;
+      border: none;
+      cursor:pointer;
+      overflow: hidden;
+      font-family: 'Permanent Marker';
+      text-align: left;
+      font-size: 18px;
+      h4 {
+			color: #969696;
+			&:hover {
+    		color: #fff;
+    	  }
+    	&:onclick {
+    		color: #fff;
+    	  }
+			}
 		}
 	}
 	#openfav, .openlist, .openmap {
