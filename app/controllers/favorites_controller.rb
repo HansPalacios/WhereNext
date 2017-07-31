@@ -56,7 +56,7 @@ class FavoritesController < ApplicationController
   def destroy
     @favorite.destroy
     respond_to do |format|
-      format.html { redirect_to favorites_url, notice: 'Favorite was successfully destroyed.' }
+      format.html { redirect_to root, notice: 'Favorite was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class FavoritesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def favorite_params
-      params.require(:favorite).permit(:bar_id, :user_id, :user_id, :bar_id)
+      params.require(:favorite).permit(:user_id, :bar_id)
     end
 end

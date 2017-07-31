@@ -55,6 +55,7 @@ class RatingsController < ApplicationController
     respond_to do |format|
       if @rating.save
         format.html { redirect_to @rating, notice: 'Rating was successfully updated.' }
+        format.js 
         format.json { render :show, status: :ok, location: @rating }
       else
         format.html { render :edit }
