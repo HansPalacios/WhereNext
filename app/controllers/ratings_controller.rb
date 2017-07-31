@@ -1,5 +1,5 @@
 class RatingsController < ApplicationController
-  before_action :set_rating, only: [:show, :edit, :update, :destroy]
+  before_action :set_rating, only: [:show, :edit, :destroy]
 
   # GET /ratings
   # GET /ratings.json
@@ -16,6 +16,13 @@ class RatingsController < ApplicationController
   def new
     @rating = Rating.new
   end
+
+
+
+
+
+
+
 
   # GET /ratings/1/edit
   def edit
@@ -40,8 +47,13 @@ class RatingsController < ApplicationController
   # PATCH/PUT /ratings/1
   # PATCH/PUT /ratings/1.json
   def update
+    @rating = Rating.find_by(user_id: current_user.id, bar_id: params[:bar_id]) || Rating.new
+    @rating.user_id = current_user.id
+    @rating.bar_id =  params[:bar_id]
+    @rating.rating = params[:rating]
+
     respond_to do |format|
-      if @rating.update(rating_params)
+      if @rating.save
         format.html { redirect_to @rating, notice: 'Rating was successfully updated.' }
         format.json { render :show, status: :ok, location: @rating }
       else
