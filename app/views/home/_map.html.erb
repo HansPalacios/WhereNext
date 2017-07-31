@@ -6,7 +6,7 @@
 
 	<!-- Hover modal -->
 	<% @bars.each do |bar| %>
-		<div id="<%= bar.image %>" class="maphover">
+		<div id="bar_<%=bar_id%>" class="maphover">
 			<div class="row">
 		    <div class="col-md-6">
 						<%= image_tag ( "#{bar.image}" ), :class => 'image' %>

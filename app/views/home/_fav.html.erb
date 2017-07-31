@@ -3,7 +3,7 @@
 			<h2 class="rotate">Favorites</h2>
 			<div id="favbar">
 				<% @favorites.each do |favorite| %>
-						<button id="<%= favorite.bar.image %>.3"><h4><%= favorite.bar.name %></h4></button>
+						<button class="favopen" id="fav_<%= favorite.bar_id %>"><h4><%= favorite.bar.name %></h4></button>
 				<% end %>
 			</div>
 	</a>
