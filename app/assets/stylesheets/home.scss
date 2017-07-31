@@ -67,6 +67,32 @@
 				display: inline-block;
 				margin-left: 10px;
 			}
+		.linkrow {
+			width: 100%;
+			margin-top: 20px;
+			text-align: center;
+			.link {
+				width: 200px;
+				margin: 0 auto;
+				text-align: center;
+				a {
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+			}
+			.adminlinks {
+					width: 200px;
+					margin: 0 auto 10px auto;
+					text-align: center;
+					border: 1px solid grey;
+					padding: 5px;
+					text-decoration-color: none;
+					color: black;
+					background-color: rgba(100,100,100,.1);
+					font-family: "Oswald";
+				}
+
+		}
 		.eachbar {
 			border-bottom: 1px solid grey;
 			border-top: 1px solid grey;

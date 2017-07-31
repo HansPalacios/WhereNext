@@ -1,6 +1,24 @@
 // Place all the styles related to the Bars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#newbar {
+	background-color: rgba(0,0,0,.6);
+	color: #fmfmfm;
+	font-family: "Oswald";
+	.field, #image, .actions {
+		margin: 20px;
+	}
+	.right {
+		text-align: right;
+	}
+	#backlink {
+		color: rgba(4,4,4,.8);
+		background-color: rgba(200,200,200,1);
+		text-decoration-color: none;
+		border: 1px solid ;
+		padding: 5px;
+	}
+}
 .showbar {
 	margin: 50px;
 	width: 90%;
