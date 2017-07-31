@@ -3,7 +3,7 @@
   <p class="alert"><%= alert %></p>
 	<% @bars.each do |bar| %>
 		<div class="row eachbar">
-			<div class="col-md-3">
+			<div class="row">
 				 <style media="screen">
 				  .bar-<%= bar.id %> { background-image: url(<%= bar.image %>); }
 				</style>
@@ -11,28 +11,28 @@
 					<%= link_to bar do
 						tag.article "", :class => " bar bar-#{bar.id}" end %>
 				</div>
+				<div>
+					<p><strong><em><%= bar.name %></em></strong></p>
+					<p><%= bar.address %></p>
+					<p><%= bar.phone_number %></p>
+					<div style="width:<%= 23 * bar.mean_rating %>px" id="stars"></div>
+				</div>
 			</div>
-			<div class="col-md-2">
-				<p><strong><em><%= bar.name %></em></strong></p>
-				<p><%= bar.address %></p>
-				<p><%= bar.phone_number %></p>
+			<div class="row">
+				<div>
+					<p><%= bar.description %></p>
+				</div>
 			</div>
-			<div class="col-md-3">
-				<p><%= bar.description %></p>
-			</div>
-			<div class="col-md-2">
+			<div class="row">
 				<p><strong>Amenities:</strong></p>
-			<%= output_attributes bar %>
+				<%= output_attributes bar %>
 			</div>
-			<div class="col-md-1">
+			<br>
+			<div class="row">
 				<p><strong>Popular Nights:</strong></p>
 				<div id="popnights">
 					<%= bar.popular_nights %>
 				</div>
-			</div>
-			<div class="col-md-1" id="rating">
-				<p><strong>Avg. Rating<br><em>(1-10)</em>:</strong></p>
-				<p><%= bar.rating_id %></p>
 			</div>
 		</div>
 	<% end %>

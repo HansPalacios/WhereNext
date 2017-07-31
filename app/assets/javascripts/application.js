@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	signin.addEventListener('click', function(){
 	    sibox.style.display = 'inline-block';
 			subox.style.display = 'none';
-
 	});
+
 	if( signup )
 	signup.addEventListener('click', function(){
 			console.log()

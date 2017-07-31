@@ -1,20 +1,17 @@
 <header>
  			<div class="container-fluid">
  				<div class="row">
-	 				<div class="col-md-6">
-						<%= image_tag ( "Where3.png" ) %>
-	 				</div>
-          <div class="col-md-5">
+	 				<div class="col-md-12">
+						<%= link_to '/' do image_tag ( "Where3.png" ) end %>
           	<div id="session_links">
 							<% if user_signed_in? %>
      						<%= link_to "Sign Out", destroy_user_session_path, method: :delete, :id => 'button' %>
      					<% else %>
 		          	<%= link_to 'Sign Up', '#', :id => 'signup' %>
 				 				<%= link_to 'Sign In', '#', :id => 'signin' %>
+
 			 				<% end %>
 			 			</div>
-			 			<div class="col-md-1"></div>
-          </div>
  				</div>		
  			</div>
  		</header>

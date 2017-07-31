@@ -4,7 +4,7 @@ module BarsHelper
 		result = ""
 		Bar.attributes.each do |attribute| 
 			if bar.send(attribute)
-				result += tag.p attribute.titleize
+				result += tag.p attribute.titleize + ","
 			end
 		end
 		result.html_safe
