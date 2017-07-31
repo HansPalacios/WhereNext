@@ -1,17 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
 
-	var button = document.getElementById( '<%= favorite.bar.image %>.3' )
-	var modal = document.getElementById( '<%= favorite.bar.image %>.2' )
-	var closem = document.getElementById( 'closemodal' )
+// 	var bars = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+	
+// 	modalBox(el);
+// 	openModalButton(el);
+		
+// });
 
-	if( closem )
-	closem.addEventListener('click', function() {
-			modal.style.display = 'none';
-	});
-	if( button )
-	button.addEventListener('click', function(event){
-		console.log(event)
-		event.preventDefault();
-	  modal.style.display = 'inline-block';
-		});
-});
+// function openModalButton( el ) {
+// 	document.querySelectorAll('.favopen').forEach(function(open) {
+// 		open.querySelector('button').addEventListener('click', function() {
+// 				document.querySelector().style.display = 'inline-block';
+// 		});
+// 	});
+// };
+
+// function modalBox( el ) {
+// 	document.querySelectorAll('.barmodal').forEach(function(modal) {
+// 		modal.querySelector('#closem').addEventListener('click', function() {
+// 				modal.style.display = 'none';
+// 		});
+// 	});
+// };
