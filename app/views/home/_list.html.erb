@@ -1,7 +1,8 @@
 <div class="list">
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-	<% @bars.each do |bar| %>
+	<% @bars.each do |bar| 
+		 rating = bar.ratings.find_by(user_id: current_user.id) %>
 		<div class="row eachbar">
 			<div class="col-md-3">
 				 <style media="screen">
@@ -26,13 +27,23 @@
 			<div class="col-md-3">
 				<div style="width:<%= 23 * bar.mean_rating %>px" id="stars"></div>
 				<% if user_signed_in? %>
-					<button id="ratingbutton">Add Rating</button>
-					<div id="rating">
-						<div class="star1"></div>
-						<div class="star2"></div>
-						<div class="star3"></div>
-						<div class="star4"></div>
-						<div class="star5"></div>
+					<button class="ratingbutton">Add Rating</button>
+					<div class="rating" data-default="<%=  rating ? rating.rating : 0 %>">
+						<%= link_to bar_rating_path(bar,1), remote: true do 
+							tag.div :class => "star1" 
+							end %>
+						<%= link_to bar_rating_path(bar,2), remote: true do 
+							tag.div :class => "star2" 
+							end %>
+						<%= link_to bar_rating_path(bar,3), remote: true do 
+							tag.div :class => "star3" 
+							end %>
+						<%= link_to bar_rating_path(bar,4), remote: true do 
+							tag.div :class => "star4" 
+							end %>
+						<%= link_to bar_rating_path(bar,5), remote: true do 
+							tag.div :class => "star5" 
+							end %>
 					</div>
 				<% end %>
 				<p><%= bar.description %></p>
