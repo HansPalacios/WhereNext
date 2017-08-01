@@ -65,7 +65,6 @@
 
 </div> -->
 
-<%= render 'home/map_image' %>
 <script>
 document.querySelectorAll(".bar_icon").forEach(function(icon){
 	let id = icon.id.slice(icon.id.lastIndexOf("_")+1),
@@ -76,11 +75,14 @@ document.querySelectorAll(".bar_icon").forEach(function(icon){
 	// SUMMARY HOVER
 	icon.addEventListener("mouseover",function(event){
 	    let rect = icon.getBoundingClientRect(),
+          daddy_rect = document.querySelector("#map_daddy").getBoundingClientRect(),
 	        modal = document.querySelector(summary_name);
 		console.log("summary_name",summary_name,document.querySelector(summary_name));
 		modal.style.display = "inline-block";
-		modal.style.top = Math.max(0,rect.top - 100) + "px";
-		modal.style.left = Math.max(0,rect.left - 150) + "px";
+		modal.style.top = Math.max(0,rect.top - daddy_rect.top - 150) + "px"; 
+    var y = Math.max(0,rect.left - 65) 
+		modal.style.left = (y > 700? 700 :y) + "px";
+
 	});
 	icon.addEventListener("mouseout",function(event){
 		document.querySelector(summary_name).style.display = "none";
