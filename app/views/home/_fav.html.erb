@@ -47,8 +47,10 @@
             <p><%= bar.rating_id %></p>
           </div>
         </div>
-        <div class="row">
-        	<a href="favdelete"><p id="removefav">Remove from favorites</p></a>
+        <div class="row favdeleterow">
+        	<%= link_to favdelete_path(bar) do
+          tag.p  "Remove from favorites"
+          end %>
         </div>
       </div>
     </div>

@@ -4,25 +4,28 @@ class RatingsController < ApplicationController
   # GET /ratings
   # GET /ratings.json
   def index
+    unless user_signed_in? && current_user.admin?
+      flash[:notice] = "You don't have access to that page!"
+      redirect_to root_path
+      return
+    end
     @ratings = Rating.all
   end
 
   # GET /ratings/1
   # GET /ratings/1.json
   def show
+    unless user_signed_in? && current_user.admin?
+      flash[:notice] = "You don't have access to that page!"
+      redirect_to root_path
+      return
+    end
   end
 
   # GET /ratings/new
   def new
     @rating = Rating.new
   end
-
-
-
-
-
-
-
 
   # GET /ratings/1/edit
   def edit
