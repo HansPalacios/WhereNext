@@ -58,14 +58,14 @@
 
 <!-- station modal -->
 
-	<div id="subway_hewes_modal" class="subway_icon">
+	<div id="subway_hewes_modal" class="subway_modal">
 		<p>Hewes St.</p>
 		<p>Trains: J, M</p>
 	</div>
 
 </div>
 
-
+<%= render 'home/map_image' %>
 <script>
 document.querySelectorAll(".bar_icon").forEach(function(icon){
 	let id = icon.id.slice(icon.id.lastIndexOf("_")+1),
@@ -97,16 +97,6 @@ document.querySelectorAll(".bar_icon").forEach(function(icon){
         modal.style.display = "inline-block";
     });
 
-	// let click_id = icon.id.slice(icon.id.lastIndexOf("_")+1),
-	//     details = "#details_"+id;
-	// icon.addEventListener("click",function(event){
-	//     let rect = icon.getBoundingClientRect(),
-	//         modal = document.querySelector(details);
-	// 	console.log("details",details,document.querySelector(details));
-	// 	modal.style.display = "inline-block";
-	// 	modal.style.top = Math.max(0,rect.top - 100) + "px";
-	// 	modal.style.left = Math.max(0,rect.left - 150) + "px";
-	// });
 });
 document.querySelectorAll(".subway_icon").forEach(function(icon){
 	let modal_name = "#" + icon.id + "_modal";

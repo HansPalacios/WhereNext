@@ -42,19 +42,16 @@
 	height: 200px;
 	color: #fff;
 	font-family: "Oswald";
-	text-decoration-color: white;
 }
-.bar_info {
-	position: absolute;
-	width: 500px;
-	height: 300px;
-}
+
 .bar_info {
 	position: fixed;
+	width: 70%;
+	font-family: "Oswald";
+	color: #fff;
 	top: 30%;
 	left: 15%;
 	z-index: 1;
-	width: 70%;
 	background-color: rgba(30,30,30,.9);
 	color: white;
 	padding: 20px;
@@ -90,7 +87,7 @@
 #map_daddy{
 	position:relative;
 }
-.subway_hewes_modal{
+.subway_icon{
 	display: none;
 	position:absolute;
 	width: 300px;
