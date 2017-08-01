@@ -26,6 +26,7 @@
 	background-color: rgba(100,100,100,.2);
 	text-align: center;
 	padding: 20px;
+	font-family: 'Oswald';
 	.image {
 		max-width: 500px;
 		display: block;
@@ -67,13 +68,28 @@
 	width: 70%;
 	font-family: "Oswald";
 	color: #fff;
-	top: 30%;
+	top: 25%;
 	left: 15%;
 	z-index: 1;
 	background-color: rgba(30,30,30,.9);
 	color: white;
 	padding: 20px;
 	border: 1px solid grey;
+	z-index: 5;
+	text-align: center;
+	.favdeleterow {
+		width: 100%;
+		text-align: center;
+		a {
+			color: white;
+			text-decoration-color: none;
+			border: 1px solid grey;
+			padding: 10px;
+			font-size: 15px;
+			margin: 0 auto;
+			width: 150px;
+		}
+	}
 	img {
 		width: 400px;
 		display: inline-block;
