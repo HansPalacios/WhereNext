@@ -2,7 +2,6 @@
   <% if bar.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
-
       <ul>
       <% bar.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,83 +9,76 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :bar_name %>
+   <div class="field">
+     <%= form.label :name %>
+     <%= form.text_field :name, id: :bar_name %>
+   </div>
+   <div class="field">
+     <%= form.label :address %>
+     <%= form.text_field :address, id: :bar_address %>
+   </div>
+   <div class="field">
+     <%= form.label :phone_number %>
+     <%= form.text_field :phone_number, id: :bar_phone_number %>
+   </div>
+   <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-2">
+      <div class="field right">
+        <%= form.label :music %>
+        <%= form.check_box :music, id: :bar_music %>
+      </div>
+      <div class="field right">
+        <%= form.label :sports %>
+        <%= form.check_box :sports, id: :bar_sports %>
+      </div>
+      <div class="field right">
+        <%= form.label :dancing %>
+        <%= form.check_box :dancing, id: :bar_dancing %>
+      </div>
+      <div class="field right">
+        <%= form.label :beer %>
+        <%= form.check_box :beer, id: :bar_beer %>
+      </div>
+      <div class="field right">
+        <%= form.label :cocktails %>
+        <%= form.check_box :cocktails, id: :bar_cocktails %>
+      </div>
+      <div class="field right">
+        <%= form.label :wine %>
+        <%= form.check_box :wine, id: :bar_wine %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="field right">
+        <%= form.label :rooftop %>
+        <%= form.check_box :rooftop, id: :bar_rooftop %>
+      </div>
+      <div class="field right">
+        <%= form.label :cheap_food %>
+        <%= form.check_box :cheap_food, id: :bar_cheap_food %>
+      </div>
+      <div class="field right">
+        <%= form.label :dress_code %>
+        <%= form.check_box :dress_code, id: :bar_dress_code %>
+      </div>
+      <div class="field right">
+        <%= form.label :line %>
+        <%= form.check_box :line, id: :bar_line %>
+      </div>
+      <div class="field right">
+        <%= form.label :karaoke %>
+        <%= form.check_box :karaoke, id: :bar_karaoke %>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
   </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :bar_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number, id: :bar_phone_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label :music %>
-    <%= form.check_box :music, id: :bar_music %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sports %>
-    <%= form.check_box :sports, id: :bar_sports %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dancing %>
-    <%= form.check_box :dancing, id: :bar_dancing %>
-  </div>
-
-  <div class="field">
-    <%= form.label :beer %>
-    <%= form.check_box :beer, id: :bar_beer %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cocktails %>
-    <%= form.check_box :cocktails, id: :bar_cocktails %>
-  </div>
-
-  <div class="field">
-    <%= form.label :wine %>
-    <%= form.check_box :wine, id: :bar_wine %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rooftop %>
-    <%= form.check_box :rooftop, id: :bar_rooftop %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cheap_food %>
-    <%= form.check_box :cheap_food, id: :bar_cheap_food %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dress_code %>
-    <%= form.check_box :dress_code, id: :bar_dress_code %>
-  </div>
-
-  <div class="field">
-    <%= form.label :line %>
-    <%= form.check_box :line, id: :bar_line %>
-  </div>
-
   <div class="field">
     <%= form.label :popular_nights %>
     <%= form.number_field :popular_nights, id: :bar_popular_nights %>
   </div>
-
-  <div class="field">
-    <%= form.label :karaoke %>
-    <%= form.check_box :karaoke, id: :bar_karaoke %>
-  </div>
-
-  <%= form.file_field :image %>
+  
+  <%= form.file_field :image, :id => "image" %>
 
   <div class="actions">
     <%= form.submit %>

@@ -1,67 +1,80 @@
 <div class="list">
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  <% if user_signed_in? && current_user.admin? %>
+	  <div class="row linkrow">
+	  	<%= link_to 'New Bar', new_bar_path, :class => "adminlinks" %>
+	  </div>
+	<% end %>
 	<% @bars.each do |bar| %>
 		 <%if user_signed_in? then rating = bar.ratings.find_by(user_id: current_user.id) end %>
-		<div id="bar_daddy_<%= bar.id %>" class="row eachbar">
-			<div class="col-md-3">
-				 <style media="screen">
-				  .bar-<%= bar.id %> { background-image: url(<%= bar.image %>); }
-				</style>
-				<div class="barlist">
-					<%= link_to bar do
-						tag.article "", :class => " bar bar-#{bar.id}" 
-						end %>
-				</div>
-			</div>
-			<div class="col-md-2">
-					<% if user_signed_in? %>
-						<%= link_to '#' do %>
-   						<%= image_tag 'addfav.png', :id => 'addfav' %>
-						<% end %>
-					<% end %>
-					<p><strong><em><%= bar.name %></em></strong></p>
-				<p><%= bar.address %></p>
-				<p><%= bar.phone_number %></p>
-			</div>
-			<div class="col-md-3">
-				<div style="width:<%= 23 * bar.mean_rating %>px" id="stars"></div>
-				<% if user_signed_in? %>
-					<button class="ratingbutton">Add Rating</button>
-					<div class="rating" data-default="<%=  rating ? rating.rating : 0 %>">
-						<%= link_to bar_rating_path(bar,1), remote: true do 
-							tag.div :class => "star1" 
-							end %>
-						<%= link_to bar_rating_path(bar,2), remote: true do 
-							tag.div :class => "star2" 
-							end %>
-						<%= link_to bar_rating_path(bar,3), remote: true do 
-							tag.div :class => "star3" 
-							end %>
-						<%= link_to bar_rating_path(bar,4), remote: true do 
-							tag.div :class => "star4" 
-							end %>
-						<%= link_to bar_rating_path(bar,5), remote: true do 
-							tag.div :class => "star5" 
+		<div id="bar_daddy_<%= bar.id %>" class="row eachbar">	<div class="row">
+				<div class="col-md-3">
+					 <style media="screen">
+					  .bar-<%= bar.id %> { background-image: url(<%= bar.image %>); }
+					</style>
+					<div class="barlist">
+						<%= link_to bar do
+							tag.article "", :class => " bar bar-#{bar.id}" 
 							end %>
 					</div>
-				<% end %>
-				<p><%= bar.description %></p>
-			</div>
-			<div class="col-md-2">
-				<p><strong>Amenities:</strong></p>
-			<%= output_attributes bar %>
-			</div>
-			<div class="col-md-1">
-				<p><strong>Popular Nights:</strong></p>
-				<div id="popnights">
-					<%= bar.popular_nights %>
+				</div>
+				<div class="col-md-2">
+						<% if user_signed_in? %>
+							<%= link_to '#' do %>
+	   						<%= image_tag 'addfav.png', :id => 'addfav' %>
+							<% end %>
+						<% end %>
+						<p><strong><em><%= bar.name %></em></strong></p>
+					<p><%= bar.address %></p>
+					<p><%= bar.phone_number %></p>
+				</div>
+				<div class="col-md-3">
+					<div style="width:<%= 23 * bar.mean_rating %>px" id="stars"></div>
+					<% if user_signed_in? %>
+						<button class="ratingbutton">Add Rating</button>
+						<div class="rating" data-default="<%=  rating ? rating.rating : 0 %>">
+							<%= link_to bar_rating_path(bar,1), remote: true do 
+								tag.div :class => "star1" 
+								end %>
+							<%= link_to bar_rating_path(bar,2), remote: true do 
+								tag.div :class => "star2" 
+								end %>
+							<%= link_to bar_rating_path(bar,3), remote: true do 
+								tag.div :class => "star3" 
+								end %>
+							<%= link_to bar_rating_path(bar,4), remote: true do 
+								tag.div :class => "star4" 
+								end %>
+							<%= link_to bar_rating_path(bar,5), remote: true do 
+								tag.div :class => "star5" 
+								end %>
+						</div>
+					<% end %>
+					<p><%= bar.description %></p>
+				</div>
+				<div class="col-md-2">
+					<p><strong>Amenities:</strong></p>
+				<%= output_attributes bar %>
+				</div>
+				<div class="col-md-1">
+					<p><strong>Popular Nights:</strong></p>
+					<div id="popnights">
+						<%= bar.popular_nights %>
+					</div>
+				</div>
+				<div class="col-md-1" id="rating">
+					<p><strong>Avg. Rating<br><em>(1-10)</em>:</strong></p>
+					<p><%= bar.rating_id %></p>
 				</div>
 			</div>
-			<div class="col-md-1" id="rating">
-				<p><strong>Avg. Rating<br><em>(1-10)</em>:</strong></p>
-				<p><%= bar.rating_id %></p>
-			</div>
+			<% if user_signed_in? && current_user.admin? %>
+				<div class="row linkrow">
+					<div class="link">
+				 	 	<%= link_to 'Edit', edit_bar_path(bar) %> | <%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %>
+				 	</div>
+				</div>
+			<% end %>
 		</div>
 	<% end %>
 </div>
