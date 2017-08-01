@@ -4,6 +4,7 @@
   <% if user_signed_in? && current_user.admin? %>
 	  <div class="row linkrow">
 	  	<%= link_to 'New Bar', new_bar_path, :class => "adminlinks" %>
+	  	<%= link_to 'Edit Users', 'users', :class => "adminlinks" %>
 	  </div>
 	<% end %>
 	<% @bars.each do |bar| %>

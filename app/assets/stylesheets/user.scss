@@ -1,0 +1,71 @@
+// Place all the styles related to the User controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#edituser {
+	text-align: center;
+	font-family: "Oswald";
+	.info {
+		text-align: center;
+		margin: 0 auto;
+		.center {
+			width: 100%;
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+	.linkrow {
+		margin-top: 20px;
+		text-align: center;
+		.adminlinks {
+				width: 200px;
+				margin: 0 auto 10px auto;
+				text-align: center;
+				border: 1px solid grey;
+				padding: 5px;
+				text-decoration-color: none;
+				color: black;
+				background-color: rgba(100,100,100,.1);
+				font-family: "Oswald";
+			}
+	}
+}
+#listusers {
+	text-align: center;
+	font-family: 'Oswald';
+	table {
+		margin: 0 auto;
+		border-collapse: none;
+		border-spacing: 0;
+    td {
+    	padding: 20px;
+    	border-top: 1px solid grey;
+    }
+    th {
+    	padding: 20px;
+    }
+	}
+	.linkrow {
+			margin-top: 20px;
+			text-align: center;
+			.link {
+				width: 200px;
+				margin: 0 auto;
+				text-align: center;
+				a {
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+			}
+			.adminlinks {
+					width: 200px;
+					margin: 0 auto 10px auto;
+					text-align: center;
+					border: 1px solid grey;
+					padding: 5px;
+					text-decoration-color: none;
+					color: black;
+					background-color: rgba(100,100,100,.1);
+					font-family: "Oswald";
+				}
+		}
+}
