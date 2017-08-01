@@ -3,6 +3,9 @@ class HomeController < ApplicationController
     	@bars = Bar.all
     	@favorites = current_user ? current_user.favorites : Favorite.where(nil)
     	# @rating = Rating.all
-	end         
+	end  
+	def users
+		@users = User.all
+	end       
 end
  
