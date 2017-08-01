@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		  });
 		  list.style.display = 'none';
 		  list2.style.display = 'none';
-		  changeview.style.background = 'silver';
+		  changeview.style.background = 'white';
 		});
 	});
 		
