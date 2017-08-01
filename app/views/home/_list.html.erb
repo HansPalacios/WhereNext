@@ -22,7 +22,7 @@
 				</div>
 				<div class="col-md-2">
 						<% if user_signed_in? %>
-							<%= link_to favnew_path(bar), remote: true do  image_tag 'addfav.png', :id => 'addfav'
+							<%= link_to favnew_path(bar) do  image_tag 'addfav.png', :id => 'addfav'
 							 end %>
 						<% end %>
 						<p><strong><em><%= bar.name %></em></strong></p>

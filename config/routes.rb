@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "home#index"
   # resources :favorites
-  devise_for :users, controllers: {sessions: 'users/sessions', registrations: 'users/registrations'}
+  devise_for :users
   get 'users' => 'home#users'
   resources :bars
   # resources :ratings
